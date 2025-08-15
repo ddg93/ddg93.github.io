@@ -1,0 +1,11 @@
+title: "Davide Di Giusto"
+description: "Research Engineer @ Thales CortAIx Labs/R&T, Palaiseau, France"
+theme: minima  # tells Jekyll to use the 'minima' theme
+
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Publications"
+    url: "/publications"
+  - title: "Projects"
+    url: "/projects"
