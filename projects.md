@@ -10,7 +10,7 @@ Here's an overview of my Research and Personal projects.
 
 ## A Deep Learning approach to measure particles suspended in fluid flows
 
-[A Deep Learning approach to measure particles suspended in fluid flows.](/projects/le_ring/)
+[A Deep Learning approach to measure particles suspended in fluid flows.](/projects/cvandml/)
 
 ## A Scalable GPU Solver for Fibre-Laden Turbulent Flows
 
