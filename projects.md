@@ -8,9 +8,9 @@ permalink: /projects/
 
 Here's an overview of my Research and Personal projects.
 
-## Project 1
+## A Deep Learning approach to measure particles suspended in fluid flows
 
-Convolutional Neural Networks to measure particle orientations in fluid flows with a dual-camera setup.
+[A Deep Learning approach to measure particles suspended in fluid flows.](/projects/le_ring)
 
 ## A Scalable GPU Solver for Fibre-Laden Turbulent Flows
 
