@@ -7,8 +7,8 @@ permalink: /projects/hpc/
 ### Scalable GPU Solver for Fibre-Laden Turbulent Flows
 
 <div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
-  During volcanic eruptions, turbulent air is dispersed with small rocks. 
-  During plankton blooms, turbulent sea water is dispersed with small phytoplankton.
+  In volcanic eruptions turbulent air is dispersed with small rocks. 
+  In plankton blooms turbulent sea water is dispersed with small phytoplankton.
   By dispersing fibres in turbulent flows, we can fabricate paper or high-performance concrete.
 </div>
 
@@ -17,13 +17,15 @@ During my PhD, I developed a Direct Numerical Simulation (DNS) solver for fibre-
 The turbulent flow solver could be parallilised according to a classical 1D domain decomposition, with each MPI task mapped to a dedicated GPU, an inevitable choice given the heavy computational cost of the flow resolution.
 Communication between GPUs was implemented using asynchronous MPI calls, and Fourier transforms were accelerated with NVIDIA’s cuFFT library. The porting process required writing and optimising hundreds of lines of CUDA code to ensure scalable high-performance execution.
 
-<video width="640" height="360" controls>
-  <source src="{{ site.baseurl }}/videos/flow_RE1200.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+<figure>
+  <video width="640" height="360" controls>
+    <source src="{{ site.baseurl }}/videos/flow_RE1200.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <figcaption>
-    Turbulent channel flow at Re<sub>τ</sub> = 1200. The computational grid is made by 2048 points in the stream-wise direction, 1024 points in the span-wise direction, 1025 points in the wall-normal direction.
+    Spanwise-wall normal section of a turbulent channel flow at Re<sub>τ</sub> = 1200. The computational grid is made by 2048 points in the stream-wise direction, 1024 points in the span-wise direction, 1025 points in the wall-normal direction.
   </figcaption>
-</video>
+</figure>
 
 Fluid-fibres coupling involved interpolating flow velocities at the fibres' centres and diffusing particle drag forces back to the flow discretisation grid. With the 1D domain decomposition, this two-way coupling was achieved by exchaning flow and particle halos via asynchronous MPI AllToAll communications, allowing particles to travel seamlessly through distributed GPU memories according to their position within the channel.
 

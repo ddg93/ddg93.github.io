@@ -6,9 +6,13 @@ permalink: /publications/
 
 # Publications
 
+<br>
+
 ## 2025
 
 coming soon...
+
+<br>
 
 ## 2024
 
@@ -21,6 +25,7 @@ coming soon...
 
 [📄 PDF](https://hal.science/hal-04492675/document) 
 
+<br>
 
 ## 2022
 

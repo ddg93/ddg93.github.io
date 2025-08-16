@@ -14,4 +14,4 @@ Convolutional Neural Networks to measure particle orientations in fluid flows wi
 
 ## A Scalable GPU Solver for Fibre-Laden Turbulent Flows
 
-[Developed the first GPU-accelerated, MPI-parallelised solver for fibre-laden turbulent flows, featuring a novel communication algorithm for simulating long and flexible fibres on super-computers.](/projects/hpc/)
+[A first GPU-accelerated, MPI-parallelised solver for fibre-laden turbulent flows, featuring a novel communication algorithm for simulating long and flexible fibres on super-computers.](/projects/hpc/)
