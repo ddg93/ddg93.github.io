@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "A Deep Learning approach to measure particles suspended in fluid flows"
-published: false
+permalink: /my_projects/le_ring/
 ---
 
