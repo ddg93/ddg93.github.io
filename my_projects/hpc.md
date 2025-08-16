@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "A Scalable GPU Solver for Fibre-Laden Turbulent Flows"
-permalink: /my_projects/hpc/
 ---
 
 <div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
