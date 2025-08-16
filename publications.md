@@ -6,6 +6,10 @@ permalink: /publications/
 
 # Publications
 
+## 2025
+
+coming soon...
+
 ## 2024
 
 ### Influence of small inertia on Jeffery orbits
@@ -16,3 +20,14 @@ permalink: /publications/
 **Journal:** Journal of Fluid Mechanics, 979, p.A42. 
 
 [📄 PDF](https://hal.science/hal-04492675/document) 
+
+## 2022
+
+### Turbulence modulation by slender fibers
+![Paper thumbnail](images/fluids.jpg){: width="150px" align="left" }
+
+**Authors:** **Di Giusto, D.** and Marchioli, C.
+
+**Journal:** Fluids, 7(8), p.255. 
+
+[📄 PDF](https://www.mdpi.com/2311-5521/7/8/255) 

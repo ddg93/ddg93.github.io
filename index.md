@@ -11,4 +11,8 @@ Before that, I completed my PhD in Fluid Mechanics in a double degree between th
 
 # Projects
 
+[See all my projects →](/projects/)
+
 # Publications
+
+[See all my publications →](/publications/)
