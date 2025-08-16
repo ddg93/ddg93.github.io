@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "A Scalable GPU Solver for Fibre-Laden Turbulent Flows"
+permalink: /projects/hpc
 ---
 
 <div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
@@ -59,7 +60,7 @@ do i = 1, total_static_rods
     call MPI_Irecv(recv_buffer(:, i), msg_size, MPI_DOUBLE_PRECISION, MPI_ANY_SOURCE, MPI_ANY_TAG, cart_comm, recv_request(i), ierr)
 end do
 
-! Wait for all communications to complete
+! Wait for all messages to be received
 call MPI_Waitall(total_static_rods, recv_request, MPI_STATUSES_IGNORE, ierr)
 
 </code></pre>
