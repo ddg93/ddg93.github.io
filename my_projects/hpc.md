@@ -21,7 +21,7 @@ Communication between GPUs was implemented using asynchronous MPI calls, and Fou
     Your browser does not support the video tag.
   </video>
   <figcaption>
-    Spanwise-wall normal section of a turbulent channel flow at Re<sub>τ</sub> = 1200. The computational grid is made by 2048 points in the stream-wise direction, 1024 points in the span-wise direction, 1025 points in the wall-normal direction.
+    Spanwise-wall normal section of a turbulent channel flow at Re<sub>τ</sub> = 1200. The computational grid is made by 2048 points in the stream-wise direction, 1024 points in the span-wise direction, 1025 points in the wall-normal direction. Colors indicate the streamwise velocity intensity.
   </figcaption>
 </figure>
 
