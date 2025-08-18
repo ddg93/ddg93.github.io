@@ -32,10 +32,17 @@ Particles were fabricated with rapid-prototyping methods such as 3D printing, CN
 A typical result for one experiment consisted of a couple of synchornized recordings imaging the selected particle from the top and side camera views. Each couple of recordings would typically display several particle rotations. Experiments were repeated several times, systematically varying parameters such as the particle shape, the particle aspect ratio, the fluid inertia.
 
 <div style="display: flex; justify-content: center; gap: 20px;">
-  <video width="300" autoplay loop muted>
-    <source src="{{ site.baseurl }}/videos/top.mp4" type="video/mp4">
-  </video>
-  <video width="300" autoplay loop muted>
-    <source src="{{ site.baseurl }}/videos/side.mp4" type="video/mp4">
-  </video>
+  <div style="text-align: center;">
+    <video width="300" autoplay loop muted>
+      <source src="{{ site.baseurl }}/videos/top.mp4" type="video/mp4">
+    </video>
+    <p><em>Top view</em></p>
+  </div>
+  <div style="text-align: center;">
+    <video width="300" autoplay loop muted>
+      <source src="{{ site.baseurl }}/videos/side.mp4" type="video/mp4">
+    </video>
+    <p><em>Side view</em></p>
+  </div>
+<p><em>Ring with circular section and aspect ratio 0.45</em></p>
 </div>
