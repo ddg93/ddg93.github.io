@@ -2,39 +2,43 @@
 layout: page
 title: "A Deep Learning approach to measure particles suspended in fluid flows"
 ---
-
-<div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
-  Statistical models of particles suspended in fluid flows are based on accurate mathematical descriptions of how these objects rotate in simple configurations. 
-  Laboratory experiments offer a unique framework to validate these mathematical models.
-</div>
-
-### Experiments with particles suspended in viscous shear flows
-
-During my PhD, I performed experiments to measure the rotations of particles suspended in a simple flow configuration (a viscous shear flow). Many particle shapes were considered, and the influence of parameters like the aspect ratio and the inertia was systematically explored. 
-
-Experiments were imaged with a dual-camera setup, where one **top** and one **side** cameras captured recordings from two perpendicular points of view.
-
-Typical results consisted of a couple of synchronized videos of a given particle performing several rotations.
-
-<div style="display: flex; justify-content: center; gap: 20px;">
-  <video width="300" autoplay loop muted>
-    <source src="{{ site.baseurl }}/videos/top.mp4" type="video/mp4">
-  </video>
-  <video width="300" autoplay loop muted>
-    <source src="{{ site.baseurl }}/videos/side.mp4" type="video/mp4">
-  </video>
-</div>
-
-
-
-<div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
-  
-  Measuring the orientation of axi-symmetric particles, like cylinders or spheroids, can be quite challenging, but geometrical relations can be exploited.
+<div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">  
+  Measuring the orientation of axi-symmetric particles, like cylinders or spheroids, can be quite challenging, but geometrical relations simplify the problem.
   When considering more complex shapes, like axi-symmetric and asymmetric rings, we can train Convolutional Neural Networks on synthetic data to perform this task. 
 </div>
 
+During y post-Doc at the Aix-Marseille Université, I designed a pipeline to measure particle orientations in a linear shear cell with two perpendicular cameras. This approach is inspired by the [LeNet-5](https://en.wikipedia.org/wiki/LeNet), introducing two heads that process both **top** and **side** frames at the same times.
+
+## Pipeline Overview  
+
+### 1. 3D Model Input  
+The pipeline starts with the creating of a particle **STL file** with given charateristics, like particle shape and particle aspect ratio.
+
+### 2. Two separated preparation branches
+Starting from a particle STL file, two parallel branches are initiated:  
+- **Synthetic dataset generation**: Using Blender, we render paired frames from two perpendicular camera views, similar to [the experimental setup of our experiments](/projects/experiments/). Each couple of images is annotated with the particle’s imposed orientation (the ground truth label). This kind of synthetic data is made available in [this repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main) for selected particle shapes. 
+- **Experimental preparation**: The same STL file is **3D printed** to fabricate real particles for laboratory experiments.  
+
+### 3. Experiments  
+Particles are recorded simultaneously from **two orthogonal views** (top and side) while rotating in the viscous shear flow. These videos provide the raw experimental dataset, partially hosted in [this repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main). Minimal **CV preprocessing** is applied for particle tracking.
+
+### 4. Training & Inference  
+- A **two-headed CNN**, adapted from the LeNet-5 architecture, is trained on the synthetic dataset, learning to regress the particle’s 3D orientation from the two-view image pairs.  
+- The trained model is then applied to the experimental recordings to infer the 3D particle orientation for each frame.
+
+### 5. Output  
+The pipeline returns one **time series of 3D orientations** for each experiment, reconstrcuting the **rotational dynamics** of particles suspended in viscous shear flows.
+
+## LeRing: a Two-headed LeNet-5 implementation  
+You can find the Python implementation of our two-headed CNNs in [this GitHub repository](https://github.com/ddg93/LeRing_JFM).
+
+## Data
+I am uploading experimental recordings as well as synthetic datasets for multiple particle geometries in [this Hugging Face repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main). Researchers interested in this problem and inspired by our approach are invited to play with our data and contribute.
 
 
-https://en.wikipedia.org/wiki/LeNet
-
-### LeRing: two-headed CNNs for particle orientation regression
+<figure>
+  <img src="{{ site.baseurl }}/images/pipeline.jpg" alt="Two-headed LeNet pipeline" width="640">
+  <figcaption>
+    The pipeline is as follows: a given particle geometry, represented by a '.stl' file (a), is used as the basis for the generation of a synthetic data set in Blender (b). This data set is then used to train a Deep Learning model, with the objective of estimating the particle orientation given two perpendicular projections (c). A physical particle corresponding to the '.stl' file is also created through rapid prototyping (d) and employed in the experiments (e). Subsequently, the Watershed method is applied to the recorded data from the experiments prior to the Deep Learning model inference operation, which estimates the time-evolution of the three-dimensional particle orientation vector $\mathbf{n}$ in the given experiment.
+  </figcaption>
+</figure>

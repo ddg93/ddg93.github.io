@@ -3,9 +3,12 @@ layout: page
 title: "Experiments with particles suspended in viscous shear flows"
 ---
 
-### Experiments with particles suspended in viscous shear flows
+Experiments were performed with a linear shear cell setp-up. The aim was to measure the rotation of suspended particles while varying parameters like the particle shape, the particle aspect ratio and the fluid inertia.
 
-Experiments were performed with a linear shear cell setp-up.
+<div style="border: 2px solid #ccc; padding: 15px; background-color: #f9f9f9; font-size: 1.2em; line-height: 1.5; border-radius: 8px;">
+  Statistical models of particles suspended in fluid flows are based on accurate mathematical descriptions of how these objects rotate in simple configurations. 
+  Laboratory experiments offer a unique framework to validate these mathematical models.
+</div>
 
 <figure>
   <img src="{{ site.baseurl }}/images/setup.jpg" alt="Linear shear cell setup" width="640">
@@ -66,4 +69,4 @@ A typical result for one experiment consisted of a couple of synchornized record
   });
 </script>
 
-Sorted experimental recordings can be found [in this repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main).
+Experimental recordings can be found [in this repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main).
