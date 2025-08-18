@@ -33,6 +33,7 @@ A typical result for one experiment consisted of a couple of synchornized record
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <div style="text-align: center;">
+    <p><strong>Ring with circular section and aspect ratio 0.45</strong></p>
     <video width="300" autoplay loop muted>
       <source src="{{ site.baseurl }}/videos/top.mp4" type="video/mp4">
     </video>
@@ -44,5 +45,21 @@ A typical result for one experiment consisted of a couple of synchornized record
     </video>
     <p><em>Side view</em></p>
   </div>
-<p><em>Ring with circular section and aspect ratio 0.45</em></p>
 </div>
+
+<script>
+  window.addEventListener("load", () => {
+    const v1 = document.getElementById("video1");
+    const v2 = document.getElementById("video2");
+
+    Promise.all([v1.play(), v2.play()]).catch(err => {
+      console.log("Autoplay blocked, click to start.");
+    });
+
+    v1.addEventListener("timeupdate", () => {
+      if (Math.abs(v1.currentTime - v2.currentTime) > 0.1) {
+        v2.currentTime = v1.currentTime; // resync if they drift
+      }
+    });
+  });
+</script>
