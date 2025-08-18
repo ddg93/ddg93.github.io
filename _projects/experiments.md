@@ -34,13 +34,13 @@ A typical result for one experiment consisted of a couple of synchornized record
 <div style="display: flex; justify-content: center; gap: 20px;">
 <p><strong>Ring with circular section and aspect ratio 0.45</strong></p>
   <div style="text-align: center;">
-    <video width="300" autoplay loop muted>
+    <video id="video1" width="300" autoplay loop muted>
       <source src="{{ site.baseurl }}/videos/top.mp4" type="video/mp4">
     </video>
     <p><em>Top view</em></p>
   </div>
   <div style="text-align: center;">
-    <video width="300" autoplay loop muted>
+    <video id="video2" width="300" autoplay loop muted>
       <source src="{{ site.baseurl }}/videos/side.mp4" type="video/mp4">
     </video>
     <p><em>Side view</em></p>
