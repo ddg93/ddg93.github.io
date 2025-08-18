@@ -15,3 +15,7 @@ Here's an overview of my Research and Personal projects.
 ## A Scalable GPU Solver for Fibre-Laden Turbulent Flows
 
 [A first GPU-accelerated, MPI-parallelised solver for fibre-laden turbulent flows, featuring a novel communication algorithm for simulating long and flexible fibres on super-computers.](/projects/hpc/)
+
+## Experiments with particles suspended in viscous shear flows
+
+[An experimental campaign to measure the rotation of particles with various shapes in a simple flow configuration.](/projects/experiments/)
