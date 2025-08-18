@@ -33,7 +33,7 @@ Starting from a particle STL file, two parallel branches are initiated:
   <div style="display: flex; justify-content: center; gap: 20px;">
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/images/training_dataset.jpg" width="300" alt="Top view">
-      <p><em>Synthetic training dataset.</em></p>
+      <p><em>Synthetic training dataset. Particle orientations are known.</em></p>
     </div>
     <div style="text-align: center;">
       <img src="{{ site.baseurl }}/images/time_evolution.jpg" width="300" alt="Side view">
