@@ -10,7 +10,14 @@ permalink: /publications/
 
 ## 2025
 
-coming soon...
+### Orientation of flat bodies of revolution in shear flows at low Reynolds number
+![Paper thumbnail](images/jfm_2.jpg){: width="150px" align="left" }
+
+**Authors:** **Di Giusto, D.**, Bergougnoux, L. and Guazzelli, É.
+
+**Journal:** Journal of Fluid Mechanics, 1017, p.A41.
+
+[📄 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B66C5D71373A2DF5199B3AA399AE78C7/S0022112025104217a.pdf/orientation-of-flat-bodies-of-revolution-in-shear-flows-at-low-reynolds-number.pdf)
 
 <br>
 
