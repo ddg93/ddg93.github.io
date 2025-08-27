@@ -19,6 +19,6 @@ Before that, I completed my PhD in Fluid Mechanics in a double degree between th
 
 # Links
 
-[GitHub]([https://ddg93.github.io](https://github.com/ddg93))
+[GitHub](https://github.com/ddg93)
 
 [Google Scholar](https://scholar.google.com/citations?user=FXNGTuAAAAAJ&hl=en)
