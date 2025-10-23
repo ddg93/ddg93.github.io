@@ -51,6 +51,7 @@ Particles are recorded simultaneously from **two orthogonal views** (top and sid
 
 ### 5. Output  
 The pipeline returns one **time series of 3D orientations** for each experiment, reconstrcuting the **rotational dynamics** of particles suspended in viscous shear flows.
+We can visualize a typical result in the following animation, where the top and side experimental recordings are displayed on the left together with the reconstructed particle rotational dynamics for a ring with triangular section. The corresponding training data and experimental recordings are freely available in [this repository](https://huggingface.co/datasets/ddg93/LeRing_JFM_experiments/tree/main/TR_r008).
 
 ## LeRing: a Two-headed LeNet-5 implementation  
 You can find the Python implementation of our two-headed CNNs in [this GitHub repository](https://github.com/ddg93/LeRing_JFM).
