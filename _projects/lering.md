@@ -55,7 +55,7 @@ We can visualize a typical result in the following animation, where the top and 
 
 <figure>
   <video width="640" height="360" controls>
-    <source src="{{ site.baseurl }}/videos/flow_RE1200.mp4" type="video/mp4">
+    <source src="{{ site.baseurl }}/videos/full_video_1.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <figcaption>
