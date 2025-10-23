@@ -76,4 +76,14 @@ To address this, I designed a novel parallelisation algorithm. A second, local s
   </figcaption>
 </figure>
 
-This original scheme enabled scalable, GPU-accelerated simulations of fibre-laden turbulent flows, tested on Tier-0 supercomputers such as Marconi100, JUWELS-Booster, and Piz Daint — to our knowledge, the first approach of its kind. 
+This original scheme enabled scalable, GPU-accelerated simulations of fibre-laden turbulent flows, tested on Tier-0 supercomputers such as Marconi100, JUWELS-Booster, and Piz Daint — to our knowledge, the first approach of its kind. Here we visualize an animation displaying yellow flexible fibres tumbling and bending in a turbulent channel flow at shear Reynolds 1200.
+
+<figure>
+  <video width="640" height="360" controls>
+    <source src="{{ site.baseurl }}/videos/end_laden_RE1200.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>
+    Spanwise-wall normal section of a turbulent channel flow at Re<sub>τ</sub> = 1200. The computational grid is made by 2048 points in the stream-wise direction, 1024 points in the span-wise direction, 1025 points in the wall-normal direction. Colors indicate the streamwise velocity intensity. Flexible fibres with aspect ratio 800 are rendered as yellow lines.
+  </figcaption>
+</figure>
