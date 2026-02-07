@@ -11,6 +11,10 @@ title: "A Scalable GPU Solver for Fibre-Laden Turbulent Flows"
 
 During my PhD, I developed a Direct Numerical Simulation (DNS) solver for fibre-laden turbulent channel flows, adapting an existing pseudo-spectral code for GPU-accelerated supercomputing. While the initialization routines remained in Fortran 90, the core iterative solver was ported to CUDA C, enabling execution on distributed GPUs. 
 
+**Github repository**
+The solver source code is made available at the following [repository](https://github.com/ddg93/surf_gpu).
+Stay tuned for updates...
+
 The turbulent flow solver could be parallilised according to a classical 1D domain decomposition, with each MPI task mapped to a dedicated GPU, an inevitable choice given the heavy computational cost of the flow resolution.
 Communication between GPUs was implemented using asynchronous MPI calls, and Fourier transforms were accelerated with NVIDIA’s cuFFT library. The porting process required writing and optimising hundreds of lines of CUDA code to ensure scalable high-performance execution.
 
